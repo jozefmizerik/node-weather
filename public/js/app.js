@@ -6,6 +6,7 @@ const weatherForm = document.querySelector("#weather-form");
 const cityInput = document.querySelector("#city-input");
 const cityParagraph = document.querySelector("#city");
 const temperatureParagraph = document.querySelector("#temperature");
+const summaryParagraph = document.querySelector("#summary");
 
 weatherForm.addEventListener("submit", () => {
   event.preventDefault();
@@ -20,6 +21,7 @@ weatherForm.addEventListener("submit", () => {
         }
         cityParagraph.textContent = data.location;
         temperatureParagraph.textContent = data.temperature;
+        summaryParagraph.textContent = data.summary;
       });
     });
   }

@@ -10,7 +10,8 @@ function forecast(longitude, lattitude, callback) {
     } else {
       callback(null, {
         timezone: body.timezone,
-        temperature: body.currently.temperature
+        temperature: body.currently.temperature,
+        summary: body.daily.summary
       });
     }
   });
