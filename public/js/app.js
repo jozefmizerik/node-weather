@@ -16,7 +16,6 @@ weatherForm.addEventListener("submit", () => {
       res.json().then(data => {
         cityInput.value = "";
         if (data.error) {
-          console.log(data.error);
           return (cityParagraph.textContent = data.error);
         }
         cityParagraph.textContent = data.location;
